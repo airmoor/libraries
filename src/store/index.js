@@ -1,20 +1,32 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import library from './module-library'
+Vue.use(Vuex);
 
-Vue.use(Vuex)
-
-export default function (/* { ssrContext } */) {
-  const Store = new Vuex.Store({
-    modules: {
-      library
-    },
-
-    // enable strict mode (adds overhead!)
-    // for dev mode only
-    strict: process.env.DEBUGGING
-  })
-
-  return Store
-}
+const store = new Vuex.Store({
+	state: {
+		filters: {
+			city: null,
+			contacts: {
+				withEmail: false,
+				withPhone: false,
+			},
+			weekDays: null,
+		},
+		filteredLibraries: [],
+		libraries: [],
+		isSidebarOpen: false,
+	},
+	mutations: {
+		setCity(state, city) {
+			state.filters.city = city;
+		},
+		setWithEmail(state, withEmail) {
+			state.filters.contacts.withEmail = withEmail;
+		},
+		setWithPhone(state, withPhone) {
+			state.filters.contacts.withPhone = withPhone;
+		}
+	}
+});
+export default store;
