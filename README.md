@@ -1,8 +1,18 @@
-# Quasar App (library-app)
+## About
+#### App showing libraries in Russia
 
-A Quasar Framework app
+## Used
+* Vue.js
+* Quasar Framework 
+* Yandex cards api
+* Opendata 
 
-## Install the dependencies
+## Live 
+https://airmoor-libraries.web.app/#/
+
+## Available Scripts
+
+### Install the dependencies
 ```bash
 npm install
 ```
@@ -17,6 +27,3 @@ quasar dev
 ```bash
 quasar build
 ```
-
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
